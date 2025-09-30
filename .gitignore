@@ -1,0 +1,26 @@
+# Composer
+/vendor/
+composer.lock
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# WordPress
+wp-config.php
+wp-content/uploads/
+wp-content/cache/
+
+# Logs
+*.log
+error_log
+
+# Temporary files
+*.tmp
+*.temp

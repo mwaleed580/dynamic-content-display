@@ -1,0 +1,44 @@
+{
+    "name": "mwaleed-580/dynamic-content-display",
+    "description": "Professional WordPress plugin for dynamic content management with URL-based tab ordering, ACF integration, and persistent user preferences via cookies.",
+    "type": "wordpress-plugin",
+    "keywords": ["wordpress", "plugin", "dynamic-content", "acf", "elementor"],
+    "homepage": "https://github.com/mwaleed-580/dynamic-content-display",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Muhammad Waleed",
+            "email": "waleedurahman@gmail.com",
+            "homepage": "https://www.linkedin.com/in/mwaleed580/",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0",
+        "wp-coding-standards/wpcs": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "DynamicContentDisplay\\": "includes/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DynamicContentDisplay\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "cs": "phpcs --standard=WordPress includes/",
+        "cbf": "phpcbf --standard=WordPress includes/"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "classmap-authoritative": false,
+        "apcu-autoloader": false
+    }
+}
