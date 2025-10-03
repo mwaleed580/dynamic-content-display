@@ -112,20 +112,17 @@ class TabOrderingService
         $processed_tabs = array();
 
         foreach ($data_tabs as $index => $tab) {
-            if (isset($tab['title'])) {
-                $slug = $this->convert_title_to_slug($tab['title']);
-                $processed_tabs[$index + 1] = $slug;
+            if (isset($tab['url_parameter'])) {
+                $processed_tabs[$index + 1] = $tab['url_parameter'];
             }
         }
 
         $ordering_map = array();
         $target_order = 1;
 
-        foreach ($desired_order as $desired_tab) {
-            $desired_slug = $this->convert_title_to_slug($desired_tab);
-            
-            foreach ($processed_tabs as $css_id => $slug) {
-                if ($slug === $desired_slug) {
+        foreach ($desired_order as $desired_param) {
+            foreach ($processed_tabs as $css_id => $url_param) {
+                if ($url_param === $desired_param) {
                     $ordering_map[$css_id] = $target_order;
                     $target_order++;
                     break;
@@ -133,7 +130,7 @@ class TabOrderingService
             }
         }
 
-        foreach ($processed_tabs as $css_id => $slug) {
+        foreach ($processed_tabs as $css_id => $url_param) {
             if (!isset($ordering_map[$css_id])) {
                 $ordering_map[$css_id] = $target_order;
                 $target_order++;
@@ -143,19 +140,7 @@ class TabOrderingService
         return $ordering_map;
     }
 
-    /**
-     * Convert title to URL-friendly slug
-     *
-     * @param string $title The title to convert
-     * @return string The converted slug
-     */
-    private function convert_title_to_slug(string $title): string
-    {
-        $slug = strtolower(trim($title));
-        $slug = preg_replace('/\s+/', '-', $slug);
-        $slug = preg_replace('/[^a-z0-9\-]/', '', $slug);
-        return $slug;
-    }
+
 
     /**
      * Output CSS for tab ordering
