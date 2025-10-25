@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Dynamic Content Display
- * Plugin URI: https://github.com/mwaleed-580/dynamic-content-display/
+ * Plugin URI: https://github.com/mwaleed580/dynamic-content-display/
  * Description: Professional WordPress plugin for dynamic content management with URL-based tab ordering, ACF integration, and persistent user preferences via cookies.
  * Version: 1.2.0
  * Author: Muhammad Waleed
