@@ -1,9 +1,9 @@
 {
-    "name": "mwaleed-580/dynamic-content-display",
+    "name": "mwaleed580/dynamic-content-display",
     "description": "Professional WordPress plugin for dynamic content management with URL-based tab ordering, ACF integration, and persistent user preferences via cookies.",
     "type": "wordpress-plugin",
     "keywords": ["wordpress", "plugin", "dynamic-content", "acf", "elementor"],
-    "homepage": "https://github.com/mwaleed-580/dynamic-content-display",
+    "homepage": "https://github.com/mwaleed580/dynamic-content-display",
     "license": "GPL-2.0-or-later",
     "authors": [
         {
