@@ -215,7 +215,7 @@ This plugin is licensed under the GPL v2 or later.
 
 **Muhammad Waleed**
 - LinkedIn: [mwaleed580](https://www.linkedin.com/in/mwaleed580/)
-- GitHub: [mwaleed-580](https://github.com/mwaleed-580)
+- GitHub: [mwaleed580](https://github.com/mwaleed580)
 
 ## 🙏 Acknowledgments
 
